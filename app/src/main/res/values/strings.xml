@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">StudyReports</string>
-    <string name="email_hint">E-mail</string>
-    <string name="login_hint">Login</string>
-    <string name="pass_hint">Password</string>
+    <string name="text_hint_email">E-mail</string>
+    <string name="text_hint_login">Login</string>
+    <string name="text_hint_pass">Password</string>
+    <string name="text_logo_first">STUDY</string>
+    <string name="text_logo_second">REPORTS</string>
+    <string name="text_button_auth">Login to your account</string>
+    <string name="text_button_registr">Create account</string>
+    <string name="text_createaccount"><b><u>Create account</u></b></string>
+    <string name="text_resetpassword"><b><u>Reset your password</u></b></string>
+    <string name="text_registraccount"><b><u>Login to your account</u></b></string>
 </resources>
