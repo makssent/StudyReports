@@ -3,7 +3,6 @@ package com.example.studyreports
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import com.example.studyreports.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -17,9 +16,9 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonAuth.setOnClickListener {
-            val email = binding.editTextEmail.text.toString().trim()
-            val password = binding.editTextPassword.text.toString().trim()
+        binding.loginAuthButton.setOnClickListener {
+            val email = binding.loginEmailEditText.text.toString().trim()
+            val password = binding.loginPasswordEditText.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(applicationContext, "Fields cannot be empty", Toast.LENGTH_SHORT)
@@ -33,15 +32,15 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(Intent(this,MainActivity::class.java))
                         } else {
                             Toast.makeText(applicationContext, "Authentication failed", Toast.LENGTH_SHORT).show()
-                            binding.editTextPassword.text.clear()
+                            binding.loginPasswordEditText.text.clear()
                         }
                     }
             }
         }
-        binding.textResetpassword.setOnClickListener{
+        binding.loginResetText.setOnClickListener{
             startActivity(Intent(this,ResetPasswordActivity::class.java))
         }
-        binding.textCreatepassword.setOnClickListener{
+        binding.loginCreateText.setOnClickListener{
             startActivity(Intent(this,RegistrationActivity::class.java))
         }
     }
