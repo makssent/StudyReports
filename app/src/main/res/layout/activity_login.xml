@@ -122,18 +122,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="20dp"
         android:shadowColor="#88000000"
-        android:shadowDx="15"
-        android:shadowDy="10"
-        android:shadowRadius="5"
         android:text="@string/text_createaccount"
         android:textColor="#80FFFFFF"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913"
+        app:layout_constraintVertical_bias="0.94"
         tools:ignore="TextSizeCheck,TextContrastCheck" />
 
     <TextView
@@ -143,18 +139,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="20dp"
         android:shadowColor="#88000000"
-        android:shadowDx="15"
-        android:shadowDy="10"
-        android:shadowRadius="5"
         android:text="@string/text_resetpassword"
         android:textColor="#80FFFFFF"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.048"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.913"
+        app:layout_constraintVertical_bias="0.94"
         tools:ignore="TextSizeCheck" />
 
     <TextView
@@ -196,6 +188,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042"
         tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/loginPrefixReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_prefix_reset"
+        android:textColor="#FFFDFD"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAuthButton"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/loginPrefixCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_prefix_create"
+        android:textColor="#FFFDFD"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginAuthButton"
+        app:layout_constraintVertical_bias="0.15" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,11 @@
     <string name="text_hint_username">Username</string>
     <string name="text_logo_first">STUDY</string>
     <string name="text_logo_second">REPORTS</string>
+    <string name="text_prefix_create">"Don't have account?"</string>
+    <string name="text_prefix_login">"Do you have account?"</string>
+    <string name="text_prefix_reset">"Forgot your password?"</string>
     <string name="text_button_auth">Login to your account</string>
+    <string name="text_button_reset">Reset your password</string>
     <string name="text_button_registr">Create account</string>
     <string name="text_createaccount"><b><u>Create account</u></b></string>
     <string name="text_resetpassword"><b><u>Reset your password</u></b></string>
