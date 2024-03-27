@@ -23,7 +23,7 @@
         tools:ignore="ContentDescription,MissingConstraints" />
 
     <ImageView
-        android:id="@+id/img_username"
+        android:id="@+id/icon_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
@@ -36,7 +36,7 @@
         app:srcCompat="@drawable/et_name" />
 
     <ImageView
-        android:id="@+id/img_key"
+        android:id="@+id/icon_key"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/registrationPasswordEditText"
@@ -48,7 +48,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/img_email"
+        android:id="@+id/icon_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:importantForAccessibility="no"
@@ -61,7 +61,7 @@
         app:srcCompat="@drawable/et_email" />
 
     <ImageView
-        android:id="@+id/img_logo"
+        android:id="@+id/icon_logo"
         android:layout_width="85dp"
         android:layout_height="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,7 +78,7 @@
         android:layout_width="375dp"
         android:layout_height="50dp"
         android:background="@drawable/template_button"
-        android:text="@string/text_button_registr"
+        android:text="@string/text_button_registration"
         app:backgroundTintMode="multiply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +154,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="20dp"
         android:shadowColor="#88000000"
-        android:text="@string/text_registraccount"
+        android:text="@string/text_clickable_registration"
         android:textColor="#80FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -179,7 +179,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toEndOf="@+id/img_logo"
+        app:layout_constraintStart_toEndOf="@+id/icon_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.042"
         tools:ignore="TextSizeCheck" />
@@ -199,18 +199,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toEndOf="@+id/img_logo"
+        app:layout_constraintStart_toEndOf="@+id/icon_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.092"
         tools:ignore="TextSizeCheck" />
 
     <TextView
-        android:id="@+id/registrationLogin"
+        android:id="@+id/registrationPrefixLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_prefix_login"
         android:textColor="#FFFDFD"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".bottom_nav.files.FilesFragment">
+
+    <SearchView
+        android:id="@+id/filesSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/search_border" />
+
+    <ListView
+        android:id="@+id/filesListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

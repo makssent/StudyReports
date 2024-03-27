@@ -15,7 +15,7 @@ class ResetPasswordActivity : AppCompatActivity() {
         binding = ActivityResetPasswordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.resetButton.setOnClickListener {
+        binding.resetMainButton.setOnClickListener {
             val email = binding.resetEmailEditText.text.toString().trim()
             if (email.isEmpty()) {
                 Toast.makeText(applicationContext, "Fields cannot be empty", Toast.LENGTH_SHORT)

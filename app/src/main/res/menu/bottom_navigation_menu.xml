@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/files"
+    android:title="@string/text_tittle_bottom_navigation_files"
+    android:icon="@drawable/icon_file"
+        />
+    <item
+        android:id="@+id/add_file"
+        android:title="@string/text_tittle_bottom_navigation_add_file"
+        android:icon="@drawable/icon_add_file"
+        />
+    <item
+        android:id="@+id/main_profile"
+        android:title="@string/text_tittle_bottom_navigation_main_profile"
+        android:icon="@drawable/icon_profile"
+        />
+</menu>

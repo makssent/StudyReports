@@ -15,7 +15,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.loginAuthButton.setOnClickListener {
             val email = binding.loginEmailEditText.text.toString().trim()
             val password = binding.loginPasswordEditText.text.toString().trim()

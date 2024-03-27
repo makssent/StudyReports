@@ -11,8 +11,12 @@
     <string name="text_prefix_reset">"Forgot your password?"</string>
     <string name="text_button_auth">Login to your account</string>
     <string name="text_button_reset">Reset your password</string>
-    <string name="text_button_registr">Create account</string>
-    <string name="text_createaccount"><b><u>Create account</u></b></string>
-    <string name="text_resetpassword"><b><u>Reset your password</u></b></string>
-    <string name="text_registraccount"><b><u>Login to your account</u></b></string>
+    <string name="text_button_add">Add new file</string>
+    <string name="text_button_registration">Create account</string>
+    <string name="text_clickable_create"><b><u>Create account</u></b></string>
+    <string name="text_clickable_reset"><b><u>Reset your password</u></b></string>
+    <string name="text_clickable_registration"><b><u>Login to your account</u></b></string>
+    <string name="text_tittle_bottom_navigation_add_file">Add new file</string>
+    <string name="text_tittle_bottom_navigation_main_profile">Profile</string>
+    <string name="text_tittle_bottom_navigation_files">Files</string>
 </resources>
