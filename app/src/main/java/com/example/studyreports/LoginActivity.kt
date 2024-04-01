@@ -28,7 +28,9 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(applicationContext, "Authentication successful", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, MainActivity::class.java))
+                            val intent = Intent(this, MainActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
                         } else {
                             Toast.makeText(applicationContext, "Authentication failed", Toast.LENGTH_SHORT).show()
                             binding.loginPasswordEditText.text.clear()

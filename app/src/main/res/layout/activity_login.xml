@@ -4,23 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@drawable/background">
+    tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/img_people"
-        android:layout_width="461dp"
-        android:layout_height="541dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <include
+        layout="@layout/base_window"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
-        app:srcCompat="@drawable/background_illustration"
-        tools:ignore="ContentDescription,MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ImageView
         android:id="@+id/icon_key"
@@ -46,19 +39,6 @@
         app:layout_constraintTop_toTopOf="@+id/loginEmailEditText"
         app:layout_constraintVertical_bias="0.529"
         app:srcCompat="@drawable/et_email" />
-
-    <ImageView
-        android:id="@+id/icon_logo"
-        android:layout_width="85dp"
-        android:layout_height="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/loginAuthButton"
@@ -146,46 +126,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.94"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/loginLogoSecondText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_extrabold"
-        android:shadowColor="@color/black"
-        android:shadowDx="15"
-        android:shadowDy="15"
-        android:shadowRadius="15"
-        android:text="@string/text_logo_second"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toEndOf="@+id/icon_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.092"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/loginLogoFirstText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/inter_extrabold"
-        android:shadowColor="@color/black"
-        android:shadowDx="15"
-        android:shadowDy="15"
-        android:shadowRadius="15"
-        android:text="@string/text_logo_first"
-        android:textColor="#FFFFFF"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toEndOf="@+id/icon_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042"
         tools:ignore="TextSizeCheck" />
 
     <TextView

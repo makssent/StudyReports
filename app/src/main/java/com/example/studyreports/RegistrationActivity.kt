@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.studyreports.databinding.ActivityRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
@@ -30,12 +30,24 @@ class RegistrationActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-                            val userInfo = hashMapOf<String, String>()
-                            userInfo["email"] = email
-                            userInfo["username"] = username
-                            FirebaseDatabase.getInstance(FirebaseConstants.DATABASE_URL).reference.child("Users").child(FirebaseAuth.getInstance().currentUser!!.uid)
-                                .setValue(userInfo)
-                            startActivity(Intent(this,MainActivity::class.java))
+                            val user = hashMapOf(
+                                "email" to email,
+                                "username" to username,
+                                "name" to "",
+                                "surname" to "",
+                                "option" to 0
+                            )
+                            FirebaseFirestore.getInstance().collection("Users").document(FirebaseAuth.getInstance().currentUser!!.uid)
+                                .set(user)
+                                .addOnSuccessListener {
+                                    Toast.makeText(applicationContext, "Registration successful", Toast.LENGTH_SHORT).show()
+                                    val intent = Intent(this, MainActivity::class.java)
+                                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                                    startActivity(intent)
+                                }
+                                .addOnFailureListener { e ->
+                                    Toast.makeText(applicationContext, "Failed to register user: ${e.message}", Toast.LENGTH_SHORT).show()
+                                }
                         } else {
                             Toast.makeText(applicationContext, "Registration failed", Toast.LENGTH_SHORT).show()
                         }

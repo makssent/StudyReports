@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">StudyReports</string>
+    <string name="text_ru_text_ancillaryInformation">Красным - не изменяемо!!!</string>
+    <string name="text_ru_text_saveButton">Сохранить</string>
+    <string name="text_en_text_findUserFalse">User not found</string>
     <string name="text_hint_email">E-mail</string>
     <string name="text_hint_login">Login</string>
     <string name="text_hint_pass">Password</string>
     <string name="text_hint_username">Username</string>
+    <string name="text_ru_hint_realName">Введите ваше имя..</string>
+    <string name="text_ru_hint_realSurname">Введите вашу фамилию..</string>
+    <string name="text_ru_hint_option">Введите ваш вариант..</string>
     <string name="text_logo_first">STUDY</string>
     <string name="text_logo_second">REPORTS</string>
     <string name="text_prefix_create">"Don't have account?"</string>
@@ -12,6 +18,9 @@
     <string name="text_button_auth">Login to your account</string>
     <string name="text_button_reset">Reset your password</string>
     <string name="text_button_add">Add new file</string>
+    <string name="text_ru_main_profile_settings">Account Settings</string>
+    <string name="text_ru_main_profile_information">Personal Information</string>
+    <string name="text_ru_main_profile_logout">Logout</string>
     <string name="text_button_registration">Create account</string>
     <string name="text_clickable_create"><b><u>Create account</u></b></string>
     <string name="text_clickable_reset"><b><u>Reset your password</u></b></string>
