@@ -22,11 +22,9 @@ class MainProfileFragment : Fragment() {
 
         if (FirebaseAuth.getInstance().currentUser != null) {
             binding.mainProfileTextViewEmail.text = FirebaseAuth.getInstance().currentUser?.email
-            // Запрашиваем username пользователя из Firestore
             FirebaseAuth.getInstance().currentUser?.let {
                 FirebaseFirestore.getInstance().collection("Users").document(it.uid).get().addOnSuccessListener { document ->
                     if (document.exists()) {
-                        // Если документ существует, извлекаем username и устанавливаем его
                         binding.mainProfileTextViewUsername.text = document.getString("username")
                     } else {
                         binding.mainProfileTextViewUsername.setText(R.string.text_en_text_findUserFalse)
@@ -41,20 +39,14 @@ class MainProfileFragment : Fragment() {
             startActivity(intent)
         }
         binding.mainProfileButtonPersonalInformation.setOnClickListener {
-
-            // Получение FragmentManager для начала транзакции
-            // Используется parentFragmentManager для получения менеджера фрагментов, ассоциированного с активностью
             val transaction = parentFragmentManager.beginTransaction()
-
-            // Замена фрагмента в контейнере (R.id.fragment_container) на PersonalInformationFragment
-            // Убедитесь, что R.id.fragment_container это ID контейнера в layout вашей MainActivity, где должны отображаться фрагменты
             transaction.replace(R.id.fragmentContainer, PersonalInformationFragment())
-            // Добавление транзакции в back stack, чтобы позволить пользователю возвращаться назад к предыдущему фрагменту через системную кнопку Назад
             transaction.addToBackStack(null)
-            // Подтверждение транзакции
             transaction.commit()
         }
 
         return binding.root
         }
-    }
+}
+
+

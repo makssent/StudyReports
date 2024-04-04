@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FF0000" /> <!-- Заливка красным цветом -->
+    <solid android:color="#FFF0F0F0" /> <!-- Заливка менее прозрачным белым цветом -->
     <stroke
-        android:width="2dp"
-        android:color="#475569" />
+        android:width="4dp"
+        android:color="#475569" /> <!-- Более чёткая обводка -->
     <corners android:radius="4dp" />
     <padding
         android:left="10dp"

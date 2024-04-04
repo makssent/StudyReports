@@ -1,5 +1,6 @@
 package com.example.studyreports.bottom_nav.main_profile.personalinformation
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,6 +26,9 @@ class PersonalInformationFragment : Fragment() {
                             binding.personalEditTextRealSurname.setText(document.getString("surname"))
                             binding.personalEditTextRealName.isEnabled = false
                             binding.personalEditTextRealSurname.isEnabled = false
+                            binding.personalEditTextRealSurname.setTextColor(Color.parseColor("#3F51B5"))
+                            binding.personalEditTextRealName.setTextColor(Color.parseColor("#3F51B5"))
+
                         }
                         else{
                             val builder = AlertDialog.Builder(requireContext())
