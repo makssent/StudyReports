@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".bottom_nav.main_profile.MainProfileFragment">
 
     <ScrollView
@@ -21,8 +22,8 @@
 
                 <ImageView
                     android:id="@+id/main_profileBackgroundImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="417dp"
+                    android:layout_height="227dp"
                     android:scaleType="fitXY"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="@+id/main_profileProfileImageView"
@@ -56,38 +58,23 @@
                     android:id="@+id/main_profileTextViewEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="@+id/main_profileTextViewUsername"
                     app:layout_constraintStart_toStartOf="@+id/main_profileTextViewUsername"
                     app:layout_constraintTop_toBottomOf="@+id/main_profileTextViewUsername" />
 
                 <LinearLayout
-                    android:layout_width="413dp"
-                    android:layout_height="289dp"
+                    android:layout_width="432dp"
+                    android:layout_height="375dp"
+                    android:layout_marginTop="50dp"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.523"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/main_profileTextViewEmail">
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/main_profileButtonAccountSettings"
-                        style="@android:style/Widget.Button"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/btn_background_1"
-                        android:drawableStart="@drawable/icon_settings"
-                        android:drawablePadding="20dp"
-                        android:paddingStart="20dp"
-                        android:text="@string/text_ru_main_profile_settings"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        tools:ignore="RtlSymmetry" />
+                    app:layout_constraintTop_toBottomOf="@+id/main_profileTextViewUsername"
+                    app:layout_constraintVertical_bias="0.0">
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/main_profileButtonPersonalInformation"

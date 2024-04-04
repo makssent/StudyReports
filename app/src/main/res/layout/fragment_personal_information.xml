@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".bottom_nav.main_profile.personalinformation.PersonalInformationFragment">
 
@@ -27,9 +28,10 @@
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/PersonalInformationTextView"
-                    app:layout_constraintVertical_bias="0.0">
+                    app:layout_constraintVertical_bias="1.0">
 
                     <EditText
                         android:id="@+id/personalEditTextRealSurname"
@@ -40,14 +42,13 @@
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="10dp"
                         android:autofillHints="familyName"
-                        android:background="@drawable/border"
+                        android:background="@drawable/border_with_whiteflag"
                         android:drawableStart="@drawable/icon_forward_right"
                         android:drawablePadding="20dp"
                         android:hint="@string/text_ru_hint_realSurname"
                         android:inputType="textCapWords"
                         android:paddingStart="20dp"
                         android:textAlignment="viewStart"
-                        android:textColorHint="@color/design_default_color_error"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         tools:ignore="RtlSymmetry" />
@@ -60,17 +61,16 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@drawable/border"
+                        android:autofillHints="name"
+                        android:background="@drawable/border_with_whiteflag"
                         android:drawableStart="@drawable/icon_forward_right"
                         android:drawablePadding="20dp"
                         android:hint="@string/text_ru_hint_realName"
-                        android:textColorHint="@color/design_default_color_error"
+                        android:inputType="textCapWords"
                         android:paddingStart="20dp"
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:inputType="textCapWords"
-                        android:autofillHints="name"
                         tools:ignore="RtlSymmetry" />
 
                     <EditText
@@ -81,17 +81,17 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@drawable/border"
+                        android:background="@drawable/border_with_whiteflag"
                         android:drawableStart="@drawable/icon_forward_right"
                         android:drawablePadding="20dp"
                         android:hint="@string/text_ru_hint_option"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
                         android:paddingStart="20dp"
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:inputType="number"
-                        tools:ignore="RtlSymmetry"
-                        android:importantForAutofill="no" />
+                        tools:ignore="RtlSymmetry" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/personal_informationButtonSave"
@@ -102,12 +102,13 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="32dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@drawable/border"
+                        android:background="@drawable/border_with_whiteflag"
                         android:drawableStart="@drawable/icon_save"
                         android:drawablePadding="20dp"
                         android:paddingStart="20dp"
                         android:text="@string/text_ru_text_saveButton"
                         android:textAlignment="viewStart"
+                        android:textColor="#3F51B5"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         tools:ignore="RtlSymmetry" />
@@ -118,10 +119,14 @@
                     android:id="@+id/PersonalInformationTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
                     android:text="@string/text_ru_main_profile_information"
                     android:textAlignment="viewStart"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
