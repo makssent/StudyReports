@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatorProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="186dp"
+            android:layout_height="200dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profileImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.071">
+
+            <Button
+                android:id="@+id/profileButtonBrowse"
+                style="@android:style/Widget.Button"
+                android:layout_width="174dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:text="@string/text_ru_browse"
+                tools:ignore="TextSizeCheck" />
+
+            <Button
+                android:id="@+id/profileButtonDownload"
+                style="@android:style/Widget.Button"
+                android:layout_width="174dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:text="@string/text_ru_download" />
+
+            <Button
+                android:id="@+id/profileButtonEdit"
+                style="@android:style/Widget.Button"
+                android:layout_width="174dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:text="@string/text_ru_edit" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="204dp"
+            android:layout_height="130dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/icon_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.076" />
+
+        <Button
+            android:id="@+id/profileButtonReport"
+            style="@android:style/Widget.Button"
+            android:layout_width="167dp"
+            android:layout_height="48dp"
+            android:background="@drawable/border_with_blackflag"
+            android:text="@string/text_ru_report"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImageView"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

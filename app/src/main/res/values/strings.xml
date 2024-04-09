@@ -21,6 +21,10 @@
     <string name="text_ru_main_profile_settings">Account Settings</string>
     <string name="text_ru_main_profile_information">Personal Information</string>
     <string name="text_ru_main_profile_logout">Logout</string>
+    <string name="text_ru_report">Пожаловаться</string>
+    <string name="text_ru_download">Скачать файл</string>
+    <string name="text_ru_browse">Просмотреть файл</string>
+    <string name="text_ru_edit">Изменить файл</string>
     <string name="text_button_registration">Create account</string>
     <string name="text_clickable_create"><b><u>Create account</u></b></string>
     <string name="text_clickable_reset"><b><u>Reset your password</u></b></string>
@@ -28,4 +32,22 @@
     <string name="text_tittle_bottom_navigation_add_file">Add new file</string>
     <string name="text_tittle_bottom_navigation_main_profile">Profile</string>
     <string name="text_tittle_bottom_navigation_files">Files</string>
+
+    <string name="enter_work_number">Введите номер работы..</string>
+    <string-array name="subject_array">
+        <item>ИСИС</item>
+        <item>ИТ</item>
+        <item>КГИГ</item>
+        <item>Администрарование ИС</item>
+        <item>ИН-ЯЗ</item>
+        <item>Разработка на Java</item>
+        <item>ТИПИС</item>
+        <item>Микроархитектура и Ассемблер</item>
+    </string-array>
+    <string-array name="work_type_array">
+        <item>Практическая работа</item>
+        <item>Лабораторная работа</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
