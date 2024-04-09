@@ -50,15 +50,10 @@ class FileSettingsFragment : Fragment() {
     }
 
     private fun onSaveButtonClicked() {
-        // Получение выбранных значений и текста из EditText
         val subject = binding.subjectSpinner.selectedItem.toString()
         val workType = binding.workTypeSpinner.selectedItem.toString()
         val workNumber = binding.workNumberEdittext.text.toString()
-
-        // Сформировать итоговое название
         val fileName = "${subject}_${workType}_$workNumber"
-
-        // Предположим, fileUri получен из MainActivity или другого источника
         val fileUri = Uri.parse(arguments?.getString("fileUri"))
         if (fileUri != null) {
             uploadFileToStorage(fileUri, fileName)
@@ -71,9 +66,7 @@ class FileSettingsFragment : Fragment() {
         val storageRef = FirebaseStorage.getInstance().reference.child("files/$fileName")
         storageRef.putFile(fileUri)
             .addOnSuccessListener {
-                // Получаем URL загруженного файла
                 storageRef.downloadUrl.addOnSuccessListener { uri ->
-                    // Сохраняем URL в Firestore
                     saveFileUrlToFirestore(uri.toString(), fileName)
                 }
             }

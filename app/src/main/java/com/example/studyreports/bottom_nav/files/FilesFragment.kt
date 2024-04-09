@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.studyreports.CreatorProfileFragment
+import com.example.studyreports.R
 import com.example.studyreports.databinding.FragmentFilesBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -27,9 +29,9 @@ class FilesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         filesListView = binding.filesListView
         getFilesFromFirestore()
-        filesListView.setOnItemClickListener { adapterView, view, position, id ->
+        filesListView.setOnItemClickListener { _, _, _, _ ->
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(binding.LinearLayout.id, CreatorProfileFragment())
+                .replace(R.id.LinearLayout, CreatorProfileFragment())
                 .addToBackStack(null)
                 .commit()
             binding.filesSearchView.visibility = View.GONE
@@ -51,7 +53,7 @@ class FilesFragment : Fragment() {
                 filesListView.adapter = adapter
             }
             .addOnFailureListener { exception ->
-                // Handle failure
+                Toast.makeText(context, "Ошибка загрузки файлов: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
 }
